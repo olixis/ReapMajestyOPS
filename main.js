@@ -28,7 +28,7 @@ function* downloadProva() {
 function* downloadGabarito() {
     for (let u = 1500; u < listaProvas.length; u++) {
         if (listaProvas[u].gabarito === undefined) {
-            yield console.log("Gabarito inexistente para essa prova");
+            yield fs.appendFileSync('infoLog.log',"Gabarito inexistente para essa prova");
         } else {
             yield axios.get(listaProvas[u].url).then(response => {
                 let $ = cheerio.load(response.data);
