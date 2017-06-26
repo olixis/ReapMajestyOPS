@@ -1,6 +1,6 @@
 const axios = require('axios');
 const fs = require('fs');
-const listaProvas = require('output.json');
+const listaProvas = require('./output.json');
 const cheerio = require('cheerio')
 
 
